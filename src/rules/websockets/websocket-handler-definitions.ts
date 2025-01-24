@@ -27,7 +27,7 @@ import {
 
 /*
 This file defines websocket handler *definitions*, which includes everything necessary to define
-and serialize a websockt handler's behaviour, but doesn't include the actual handling logic (which
+and serialize a websocket handler's behaviour, but doesn't include the actual handling logic (which
 lives in ./websocket-handlers instead). This is intended to allow tree-shaking in browser usage
 or remote clients to import only the necessary code, with no need to include all the real
 network processing and handling code that is only used at HTTP-runtime, so isn't relevant when
