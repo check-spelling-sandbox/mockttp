@@ -73,7 +73,7 @@ declare module "tls" {
 }
 
 // Undocumented module that allows us to turn a stream into a usable net.Socket.
-// Deprecated in Node 12+, but I'm hopeful that that will be cancelled...
+// Deprecated in Node 12+, but I'm hopeful that will be cancelled...
 // Necessary for our HTTP2 re-CONNECT handling, so for now I'm using it regardless.
 declare module "_stream_wrap" {
     import * as net from 'net';
