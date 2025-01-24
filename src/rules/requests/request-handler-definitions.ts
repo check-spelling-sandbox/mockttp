@@ -535,7 +535,7 @@ export interface PassThroughHandlerOptions extends PassThroughHandlerConnectionO
 
     /**
      * A callback that will be passed the full request before it is passed through,
-     * and which returns an object that defines how the the request content should
+     * and which returns an object that defines how the request content should
      * be transformed before it's passed to the upstream server.
      *
      * The callback can return an object to define how the request should be changed.
@@ -548,7 +548,7 @@ export interface PassThroughHandlerOptions extends PassThroughHandlerConnectionO
 
     /**
      * A callback that will be passed the full response before it is passed through,
-     * and which returns a value that defines how the the response content should
+     * and which returns a value that defines how the response content should
      * be transformed before it's returned to the client.
      *
      * The callback can either return an object to define how the response should be
