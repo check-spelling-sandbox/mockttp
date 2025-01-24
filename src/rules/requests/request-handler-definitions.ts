@@ -757,7 +757,7 @@ export interface BeforePassthroughResponseRequest {
 }
 
 /**
- * Used in merging as a marker for values to omit, because lodash ignores undefineds.
+ * Used in merging as a marker for values to omit, because lodash ignores undefined.
  * @internal
  */
 export const SERIALIZED_OMIT = "__mockttp__transform__omit__";

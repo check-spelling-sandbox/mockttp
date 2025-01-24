@@ -368,7 +368,7 @@ function validateCustomHeaders(
     }
 }
 
-// Used in merging as a marker for values to omit, because lodash ignores undefineds.
+// Used in merging as a marker for values to omit, because lodash ignores undefined.
 const OMIT_SYMBOL = Symbol('omit-value');
 
 // We play some games to preserve undefined values during serialization, because we differentiate them
@@ -378,7 +378,7 @@ const mapOmitToUndefined = <T extends { [key: string]: any }>(
 ): { [K in keyof T]: T[K] | undefined } =>
     _.mapValues(input, (v) =>
         v === SERIALIZED_OMIT || v === OMIT_SYMBOL
-            ? undefined // Replace our omit placeholders with actual undefineds
+            ? undefined // Replace our omit placeholders with actual undefined
             : v
     );
 
@@ -518,7 +518,7 @@ export class PassThroughHandler extends PassThroughHandlerDefinition {
                 }
 
                 const updatedBody = _.mergeWith(jsonBody, updateJsonBody, (_oldValue, newValue) => {
-                    // We want to remove values with undefines, but Lodash ignores
+                    // We want to remove values with undefined, but Lodash ignores
                     // undefined return values here. Fortunately, JSON.stringify
                     // ignores Symbols, omitting them from the result.
                     if (newValue === undefined) return OMIT_SYMBOL;
@@ -862,7 +862,7 @@ export class PassThroughHandler extends PassThroughHandlerDefinition {
                         }
 
                         const updatedBody = _.mergeWith(jsonBody, updateJsonBody, (_oldValue, newValue) => {
-                            // We want to remove values with undefines, but Lodash ignores
+                            // We want to remove values with undefined, but Lodash ignores
                             // undefined return values here. Fortunately, JSON.stringify
                             // ignores Symbols, omitting them from the result.
                             if (newValue === undefined) return OMIT_SYMBOL;
