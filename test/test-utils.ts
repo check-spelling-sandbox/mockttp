@@ -179,7 +179,7 @@ export async function openRawTlsSocket(
     });
 }
 
-// Write a message to a socket that will trigger a respnse, but kill the socket
+// Write a message to a socket that will trigger a response, but kill the socket
 // before the response is received, so a real response triggers a reset.
 export async function writeAndReset(socket: net.Socket, content: string) {
     socket.write(content);

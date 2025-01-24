@@ -150,7 +150,7 @@ export type CallbackResponseResult =
 
 /**
  * Can be returned from callbacks to define parts of a response, or
- * override parts when given an existing repsonse.
+ * override parts when given an existing response.
  *
  * All fields are optional, and omitted values will default to the original
  * response value or a default value.
