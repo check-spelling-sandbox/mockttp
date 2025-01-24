@@ -1,7 +1,7 @@
 import * as semver from 'semver';
 
 export function areFFDHECurvesSupported(opensslVersion: string | undefined) {
-    // FFDHE curves (ffdhe2048, ffdhe3072) are only avaliable from
+    // FFDHE curves (ffdhe2048, ffdhe3072) are only available from
     // OpenSSL 3+
 
     // Before 3.0.0, OpenSSL has followed non-semver version
