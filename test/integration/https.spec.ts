@@ -62,7 +62,7 @@ describe("When configured for HTTPS", () => {
                     defaultDomain: 'test.example',
                     countryName: 'UK',
                     localityName: 'London',
-                    organizationName: 'Test Organiation'
+                    organizationName: 'Test Organization'
                 }
             });
 
