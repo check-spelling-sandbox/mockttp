@@ -195,7 +195,7 @@ export class ClientServerChannel extends Duplex {
             const responseListener = (response: RequestMessage<R>) => {
                 if (response.requestId === requestId) {
                     if (response.error) {
-                        // Derialize error from plain object
+                        // Deserialize error from plain object
                         reject(Object.assign(new Error(), { stack: undefined }, response.error));
                     } else {
                         resolve(response.data!);
