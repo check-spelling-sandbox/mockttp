@@ -153,7 +153,7 @@ export * as PluggableAdmin from './pluggable-admin-api/pluggable-admin';
  * in minor versions without warning.
  *
  * These plugin components can be applied to the PluggableAdmin API to create a remotely
- * controlable mock management server that can mock HTTP in addition to protocols from
+ * controllable mock management server that can mock HTTP in addition to protocols from
  * other plugins.
  * @category Internal
  */
