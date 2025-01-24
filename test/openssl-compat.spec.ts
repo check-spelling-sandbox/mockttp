@@ -18,7 +18,7 @@ describe('areFFDHECurvesSupported', () => {
         expect(areFFDHECurvesSupported('-1.0.0')).to.be.false;
     });
 
-    it('Assumes false when version is uknown', () => {
+    it('Assumes false when version is unknown', () => {
         expect(areFFDHECurvesSupported(undefined)).to.be.false;
     });
 });
