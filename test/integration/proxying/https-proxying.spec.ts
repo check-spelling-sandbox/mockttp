@@ -822,7 +822,7 @@ nodeOnly(() => {
 
                         return {
                             statusCode: 418,
-                            // This still includes :status: 200, but statusCode willl quietly replace it:
+                            // This still includes :status: 200, but statusCode will quietly replace it:
                             headers: Object.assign(res.headers, {
                                 'custom-header': 'set'
                             })
