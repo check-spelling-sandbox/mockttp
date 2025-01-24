@@ -74,7 +74,7 @@ describe("URL normalization for matching", () => {
     it("should uppercase percent-encoded hex chars", () => {
         expect(
             // $/ - only / needs encoding, but encoded $ is semantically
-            // diferent from decoded, so we do want to preserve it.
+            // different from decoded, so we do want to preserve it.
             normalizeUrl('http://example.com/%2f')
         ).to.equal('http://example.com/%2F');
     });
@@ -82,7 +82,7 @@ describe("URL normalization for matching", () => {
     it("should not break when given invalid weird encodings", () => {
         expect(
             // $/ - only / needs encoding, but encoded $ is semantically
-            // diferent from decoded, so we do want to preserve it.
+            // different from decoded, so we do want to preserve it.
             normalizeUrl('https://example.com/%u002A %1 δ ')
         ).to.equal('https://example.com/%U002A%20%1%20%CE%B4');
     });
