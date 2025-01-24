@@ -62,7 +62,7 @@ export class RequestRuleBuilder extends BaseRuleBuilder {
     ) {
         super();
 
-        // Add the basic method and path matchers inititally, if provided:
+        // Add the basic method and path matchers initially, if provided:
         const method = methodOrAddRule instanceof Function ? undefined : methodOrAddRule;
         if (method === undefined && path === undefined) {
             this.matchers.push(new WildcardMatcher());
