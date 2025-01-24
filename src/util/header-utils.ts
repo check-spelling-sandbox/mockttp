@@ -20,7 +20,7 @@ with. Those are:
   convenient and consistent header format: keys are lowercased, and values are either
   strings or arrays of strings (for duplicate headers). This is returned by Node's APIs,
   but with some unclear normalization rules, so in practice we build raw headers and
-  reconstruct this ourselves everyhere, by lowercasing & building arrays of values.
+  reconstruct this ourselves everywhere, by lowercasing & building arrays of values.
 
 */
 
