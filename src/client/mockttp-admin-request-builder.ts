@@ -136,7 +136,7 @@ export class MockttpAdminRequestBuilder {
         { endpoints: Array<{ id: string, explanation?: string }> },
         MockedEndpoint[]
     > {
-        // Seperate and simpler than buildAddRequestRulesQuery, because it doesn't have to
+        // Separate and simpler than buildAddRequestRulesQuery, because it doesn't have to
         // deal with backward compatibility.
         const requestName = (reset ? 'Set' : 'Add') + 'WebSocketRules';
         const mutationName = (reset ? 'set' : 'add') + 'WebSocketRules';
