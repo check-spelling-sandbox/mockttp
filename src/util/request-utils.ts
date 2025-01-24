@@ -385,7 +385,7 @@ export function trackResponse(
         }
 
         // Headers might also have been set with setHeader before. They'll be combined, with headers
-        // here taking precendence. We simulate this by pulling in all values from getHeaders() and
+        // here taking precedence. We simulate this by pulling in all values from getHeaders() and
         // remembering any of those that we're not about to override.
         const storedHeaders = originalGetHeaders.apply(this);
         const writtenHeaderKeys = writtenHeaders.map(([key]) => key.toLowerCase());
