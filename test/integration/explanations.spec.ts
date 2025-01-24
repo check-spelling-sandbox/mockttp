@@ -19,7 +19,7 @@ describe("Mockttp explanation messages", function () {
         await server.forGet("/endpoint").times(4).thenReply(200, "7/8/9/10");
         await server.forGet("/endpoint").always().thenReply(200, "forever");
 
-        let response = await fetch(server.urlFor("/non-existent-endpoint"));
+        let response = await fetch(server.urlFor("/nonexistent-endpoint"));
         let responseText = await response.text();
 
         expect(responseText).to.include(`
@@ -42,7 +42,7 @@ Match requests making GETs for /endpoint, and then respond with status 200 and b
             _.range(8).map(() => fetch(server.urlFor("/endpoint")))
         );
 
-        let response = await fetch(server.urlFor("/non-existent-endpoint"));
+        let response = await fetch(server.urlFor("/nonexistent-endpoint"));
         let responseText = await response.text();
 
         expect(responseText).to.include(`
@@ -64,7 +64,7 @@ Match requests making GETs for /endpoint, and then respond with status 200 and b
         await server.forAnyWebSocket().thenForwardTo("google.com");
 
         await fetch(server.urlFor("/endpointA/123"));
-        let response = await fetch(server.urlFor("/non-existent-endpoint"));
+        let response = await fetch(server.urlFor("/nonexistent-endpoint"));
 
         let text = await response.text();
 
@@ -84,7 +84,7 @@ Match websockets for anything, and then forward the websocket to google.com.
         await server.forPost("/endpointA").thenCallback(() => ({}));
         await server.forPost("/endpointB").thenCallback(function handleRequest() { return {}; });
 
-        let response = await fetch(server.urlFor("/non-existent-endpoint"));
+        let response = await fetch(server.urlFor("/nonexistent-endpoint"));
         let text = await response.text();
 
         expect(text).to.include(`The configured rules are:

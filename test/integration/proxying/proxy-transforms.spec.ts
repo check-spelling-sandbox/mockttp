@@ -433,11 +433,11 @@ nodeOnly(() => {
                 });
             });
 
-            it("should show a clear error when replacing the body with a non-existent file", async () => {
+            it("should show a clear error when replacing the body with a nonexistent file", async () => {
                 await server.forAnyRequest().thenPassThrough({
                     transformRequest: {
                         replaceBodyFromFile:
-                            path.join(__dirname, 'non-existent-file.txt')
+                            path.join(__dirname, 'nonexistent-file.txt')
                     }
                 });
 
@@ -768,11 +768,11 @@ nodeOnly(() => {
                 expect(response.body).to.equal('Response from text file');
             });
 
-            it("should show a clear error when replacing the body with a non-existent file", async () => {
+            it("should show a clear error when replacing the body with a nonexistent file", async () => {
                 await server.forAnyRequest().thenPassThrough({
                     transformResponse: {
                         replaceBodyFromFile:
-                            path.join(__dirname, 'non-existent-file.txt')
+                            path.join(__dirname, 'nonexistent-file.txt')
                     }
                 });
 

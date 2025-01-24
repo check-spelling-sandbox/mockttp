@@ -54,9 +54,9 @@ describe("HTTP mock rule handling", function () {
         ).to.throw("Cannot set custom :status pseudoheader values");
     });
 
-    it("should return a clear error when mocking the body with contents from a non-existent file", async () => {
+    it("should return a clear error when mocking the body with contents from a nonexistent file", async () => {
         await server.forGet('/mocked-endpoint').thenFromFile(200,
-            path.join(__dirname, 'non-existent-file.txt')
+            path.join(__dirname, 'nonexistent-file.txt')
         );
 
         let response = await fetch(server.urlFor("/mocked-endpoint"));
