@@ -213,7 +213,7 @@ nodeOnly(() => {
                         'Transfer-Encoding': 'chunked'
                     },
                     trailers: {
-                        'Trailer-Name': 'trailer-value' // N.b thenCallback is not case sensitive (yet?)
+                        'Trailer-Name': 'trailer-value' // N.b thenCallback is not case-sensitive (yet?)
                     }
                 }));
 
