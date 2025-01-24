@@ -64,7 +64,7 @@ function ifTlsDropped(socket: tls.TLSSocket, errorCallback: () => void) {
         // If you send data, you trust the TLS connection
         socket.once('data', resolve);
 
-        // If you silently close it very quicky, you probably don't trust us
+        // If you silently close it very quickly, you probably don't trust us
         socket.once('error', reject);
         socket.once('close', reject);
         socket.once('end', reject);
