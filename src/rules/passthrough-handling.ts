@@ -228,7 +228,7 @@ export const OVERRIDABLE_REQUEST_PSEUDOHEADERS = [
 
 /**
  * Automatically update the :scheme and :authority headers to match the updated URL,
- * as long as they weren't explicitly overriden themselves, in which case let them
+ * as long as they weren't explicitly overridden themselves, in which case let them
  * be set to any invalid value you like (e.g. to send a request to one server but
  * pretend it was sent to another).
  */

@@ -53,7 +53,7 @@ describe("When configured for HTTPS", () => {
     nodeOnly(() => {
         // These tests can't be run in browsers since we can't configure SNI/CONNECT params:
 
-        describe("with overriden cert parameters", () => {
+        describe("with overridden cert parameters", () => {
 
             let server = getLocal({
                 https: {

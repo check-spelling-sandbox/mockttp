@@ -634,7 +634,7 @@ export class PassThroughHandler extends PassThroughHandlerDefinition {
             reqBodyOverride = await buildOverriddenBody(modifiedReq, headers);
 
             if (reqBodyOverride) {
-                // Automatically match the content-length to the body, unless it was explicitly overriden.
+                // Automatically match the content-length to the body, unless it was explicitly overridden.
                 headers['content-length'] = getContentLengthAfterModification(
                     reqBodyOverride,
                     clientHeaders,
