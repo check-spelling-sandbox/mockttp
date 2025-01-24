@@ -81,7 +81,7 @@ export async function getAgent({
 
                 // If you specify trusted CAs, we override the CAs used for this connection, i.e. the trusted
                 // CA for the certificate of an HTTPS proxy. This is *not* the CAs trusted for upstream servers
-                // on the otherside of the proxy - see the corresponding passthrough options for that.
+                // on the other side of the proxy - see the corresponding passthrough options for that.
                 const trustedCerts = await getTrustedCAs(
                     proxySetting.trustedCAs,
                     proxySetting.additionalTrustedCAs
