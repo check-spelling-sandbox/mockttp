@@ -301,7 +301,7 @@ export class AdminServer<Plugins extends { [key: string]: AdminPlugin<any, any> 
     }
 
     /**
-     * Subscribe to hear when each mock ession is started. The listener is provided the
+     * Subscribe to hear when each mock session is started. The listener is provided the
      * session plugin data, which can be used to log session startup, add side-effects that
      * run elsewhere at startup, or preconfigure every started plugin in addition ways.
      *
