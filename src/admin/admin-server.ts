@@ -144,7 +144,7 @@ export class AdminServer<Plugins extends { [key: string]: AdminPlugin<any, any> 
         this.adminPlugins = options.adminPlugins || {} as PluginConstructorMap<Plugins>;
 
         if (options.corsOptions?.allowPrivateNetworkAccess) {
-            // Allow web pages on non-local URLs (testsite.example.com, not localhost) to
+            // Allow web pages on non-local URLs (test-site.example.com, not localhost) to
             // send requests to this admin server too. Without this, those requests will
             // fail after rejected preflights in recent Chrome (from ~v102, ish? Unclear).
             // This is combined with the origin restrictions that may be set, so only
