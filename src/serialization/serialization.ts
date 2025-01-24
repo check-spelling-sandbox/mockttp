@@ -295,7 +295,7 @@ function isSerializedRuleParam(value: any): value is SerializedRuleParameterRefe
     return value && SERIALIZED_PARAM_REFERENCE in value;
 }
 
-export function ensureParamsDeferenced<T>(
+export function ensureParamsDereferenced<T>(
     value: T | SerializedRuleParameterReference<T>,
     ruleParams: RuleParameters
 ): T {
@@ -368,6 +368,6 @@ export function deserializeProxyConfig(
     } else if (_.isArray(proxyConfig)) {
         return proxyConfig.map((config) => deserializeProxyConfig(config, channel, ruleParams));
     } else {
-        return ensureParamsDeferenced(proxyConfig, ruleParams);
+        return ensureParamsDereferenced(proxyConfig, ruleParams);
     }
 }
