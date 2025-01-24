@@ -968,7 +968,7 @@ export class PassThroughHandlerDefinition extends Serializable implements Reques
                 replaceBody: !!this.transformRequest?.replaceBody
                     ? serializeBuffer(asBuffer(this.transformRequest.replaceBody))
                     : undefined,
-                // Update objects need to capture undefined & null as distict values:
+                // Update objects need to capture undefined & null as distinct values:
                 updateHeaders: !!this.transformRequest?.updateHeaders
                     ? JSON.stringify(
                         this.transformRequest.updateHeaders,
@@ -998,7 +998,7 @@ export class PassThroughHandlerDefinition extends Serializable implements Reques
                 replaceBody: !!this.transformResponse?.replaceBody
                     ? serializeBuffer(asBuffer(this.transformResponse.replaceBody))
                     : undefined,
-                // Update objects need to capture undefined & null as distict values:
+                // Update objects need to capture undefined & null as distinct values:
                 updateHeaders: !!this.transformResponse?.updateHeaders
                     ? JSON.stringify(
                         this.transformResponse.updateHeaders,
