@@ -18,7 +18,7 @@ describe('Protocol matching', () => {
         const builder = server.forGet("/") as any; // Avoid argument type checking.
         expect(() => builder.withProtocol("HTTP")).throw();
         expect(() => builder.withProtocol("http:")).throw();
-        expect(() => builder.withProtocol("somethingelse")).throw();
+        expect(() => builder.withProtocol("something-else")).throw();
     });
 
     it("should match requests with the protocol", async () => {
