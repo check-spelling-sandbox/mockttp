@@ -10,7 +10,7 @@ import {
     fetch
 } from "../../test-utils";
 
-describe("Rule event susbcriptions", () => {
+describe("Rule event subscriptions", () => {
 
     const server = getLocal();
     const remoteServer = getLocal();
